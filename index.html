@@ -3,34 +3,102 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>The Story Knot — Coming Soon</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>The Story Knot — Every invite tells a tale</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600..800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <meta name="description" content="Personalized digital wedding invitations & websites, crafted with AI and love. The Story Knot — Mumbai • Serving couples everywhere." />
 </head>
 <body>
-  <main class="wrap">
-    <h1>✨ Every invite tells a tale ✨</h1>
-    <p>Personalized digital wedding invitations & websites, crafted with AI and love.</p>
+  <header class="nav">
+    <div class="container">
+      <div class="brand">
+        <img src="assets/img/logo.svg" alt="The Story Knot logo" onerror="this.style.display='none'">
+        <span>The Story Knot</span>
+      </div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Netlify form -->
-    <form name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="waitlist" />
-      <p style="display:none;"><label>Don’t fill: <input name="bot-field"></label></p>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>✨ Every invite tells a tale ✨</h1>
+        <p class="sub">Personalized digital wedding invitations & websites, crafted with AI and love.</p>
 
-      <label>
-        Name
-        <input type="text" name="name" required />
-      </label>
-      <label>
-        Email
-        <input type="email" name="email" required />
-      </label>
-      <button type="submit">Join the Waitlist</button>
-    </form>
+        <form name="waitlist" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field" class="waitlist">
+          <input type="hidden" name="form-name" value="waitlist">
+          <p class="hidden"><label>Don’t fill this <input name="bot-field" /></label></p>
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Email address" required>
+          <button type="submit">Join the Waitlist</button>
+        </form>
 
-    <footer>
-      <p>hello@thestoryknot.netlify.app</p>
-      <p>Instagram: @thestoryknot</p>
-    </footer>
+        <div class="hero-badges">
+          <span>💍 Weddings</span><span>💖 Love stories</span><span>🌏 Mumbai → Worldwide</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="container grid3">
+        <div class="card">
+          <div class="icon">🎬</div>
+          <h3>AI-Powered Video Invites</h3>
+          <p>Your story brought to life with elegant animations and music.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🌐</div>
+          <h3>Personal Wedding Website</h3>
+          <p>Our Story, events, maps, RSVP—everything in one beautiful link.</p>
+        </div>
+        <div class="card">
+          <div class="icon">📱</div>
+          <h3>Social Media Kit</h3>
+          <p>Ready-to-share posts & stories for WhatsApp and Instagram.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="container narrow">
+        <h2>Why The Story Knot?</h2>
+        <p>Because your love isn’t a template. We craft digital invites and websites that reflect your journey—from meet-cute to “I do.” Subtle animations, modern typography, and a premium desi-luxe vibe.</p>
+        <ul class="ticks">
+          <li>Fast turnaround for save-the-dates</li>
+          <li>Multiple language support (Hindi, Marathi, Tamil…)</li>
+          <li>Secure RSVP + guest list export</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>Be first to get launch pricing</h2>
+        <p>Drop your email. We’ll send early-bird slots and exclusive samples.</p>
+        <a class="button" href="#top" onclick="document.forms['waitlist'].scrollIntoView({behavior:'smooth'})">Get Early Access</a>
+      </div>
+    </section>
   </main>
+
+  <footer id="contact" class="footer">
+    <div class="container">
+      <div>
+        <strong>The Story Knot</strong><br/>
+        Mumbai • Serving couples everywhere
+      </div>
+      <div class="social">
+        <a href="https://instagram.com/thestoryknot" target="_blank" rel="noreferrer">@thestoryknot</a><br/>
+        <a href="mailto:hello@thestoryknot.com">hello@thestoryknot.com</a>
+      </div>
+      <div>© <span id="year"></span> The Story Knot</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
